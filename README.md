@@ -52,4 +52,3 @@ If the extension is not working as expected:
 - Make sure you have selected the correct folder when loading the extension.
 - Verify that you've entered a valid interval (at least 1 second).
 
-If you encounter further issues, feel free to reach out for assistance.
