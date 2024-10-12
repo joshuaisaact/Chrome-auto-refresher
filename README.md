@@ -1,7 +1,7 @@
 
-# Auto Refresh Chrome Extension
+# Auto Refresher Chrome Extension
 
-This Chrome extension allows you to automatically refresh a webpage every X seconds (as set by you) and stop refreshing when a specific word or phrase is found on the page.
+This Chrome extension allows you to automatically refresh a webpage and stop refreshing when a specific word or phrase is found on the page.
 
 ## Features
 - Automatically refresh a webpage at set intervals (e.g., every 30 seconds).
