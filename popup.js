@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const stopButton = document.getElementById('stopButton');
   const intervalInput = document.getElementById('interval');
   const stopPromptInput = document.getElementById('stopPrompt');
+  const alertToggle = document.getElementById('alertToggle');
   const statusDiv = document.getElementById('status');
+  const themeToggle = document.getElementById('themeToggle');
 
   // Update status text
   function updateStatus(isRunning) {
@@ -19,8 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
   startButton.addEventListener('click', () => {
     const interval = Math.max(1, parseInt(intervalInput.value, 10)) * 1000; // Convert to milliseconds
     const stopPrompt = stopPromptInput.value;
+    const showAlert = alertToggle.checked;
 
-    chrome.runtime.sendMessage({ action: 'start', interval, stopPrompt }, (response) => {
+    chrome.runtime.sendMessage({ action: 'start', interval, stopPrompt, showAlert }, (response) => {
       if (response.status === 'running') {
         updateStatus(true);
       }
@@ -34,5 +37,22 @@ document.addEventListener('DOMContentLoaded', () => {
         updateStatus(false);
       }
     });
+  });
+
+  // Handle dark mode toggle
+  const currentTheme = localStorage.getItem('theme');
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+    themeToggle.checked = true;
+  }
+
+  themeToggle.addEventListener('change', () => {
+    if (themeToggle.checked) {
+      document.body.classList.add('dark-mode');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark-mode');
+      localStorage.setItem('theme', 'light');
+    }
   });
 });

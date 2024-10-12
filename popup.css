@@ -1,0 +1,169 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  max-width: 100%;  /* Ensure content fits within the window */
+  width: 20rem;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+input[type="number"], input[type="text"] {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--input-border);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: var(--input-background);
+  color: var(--input-text);
+  box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+button#stopButton {
+  background-color: #f44336;
+}
+
+#status {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.checkbox-container label {
+  margin: 0;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Light Mode Colors */
+:root {
+  --background-color: #f4f4f9;
+  --text-color: #333;
+  --input-border: #ccc;
+  --input-background: #fff;
+  --input-text: #000;
+}
+
+/* Dark Mode Colors */
+body.dark-mode {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --input-border: #333;
+  --input-background: #333;
+  --input-text: #fff;
+}
+
+/* Toggle Switch Styling */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 2.5rem;
+  height: 1.25rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 1.25rem;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 0.875rem;
+  width: 0.875rem;
+  left: 0.1875rem;
+  bottom: 0.1875rem;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.25rem);
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 400px) {
+  body {
+    padding: 1rem;
+  }
+
+  input[type="number"], input[type="text"], button {
+    font-size: 0.875rem;  /* Make inputs and buttons smaller */
+    padding: 0.75rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .switch {
+    width: 2rem;
+    height: 1rem;
+  }
+
+  .slider:before {
+    height: 0.75rem;
+    width: 0.75rem;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(1rem);
+  }
+}

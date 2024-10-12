@@ -3,20 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Auto Refresh</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 10px; width: 250px; }
-    input, button { display: block; margin: 10px 0; width: 100%; padding: 8px; }
-    label { margin-top: 10px; }
-  </style>
+  <title>Auto Refresher</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css"> <!-- Link to external CSS file -->
 </head>
-<body>
-  <h2>Auto Refresh</h2>
+<body class="dark-mode"> <!-- Set dark mode as default -->
+  <h2>Auto Refresher</h2>
   <label for="interval">Refresh Interval (seconds):</label>
-  <input type="number" id="interval" min="1" value="1">
+  <input type="number" id="interval" min="1" value="60">
 
   <label for="stopPrompt">Stop Prompt (optional):</label>
   <input type="text" id="stopPrompt" placeholder="Enter stop text">
+
+  <div class="toggle-container">
+    <span>Show alert when refreshing stops</span>
+    <label class="switch">
+      <input type="checkbox" id="alertToggle">
+      <span class="slider round"></span>
+    </label>
+  </div>
+
+  <div class="toggle-container">
+    <span>Dark Mode</span>
+    <label class="switch">
+      <input type="checkbox" id="themeToggle">
+      <span class="slider round"></span>
+    </label>
+  </div>
 
   <button id="startButton">Start Auto Refresh</button>
   <button id="stopButton">Stop Auto Refresh</button>
