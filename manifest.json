@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Refresh Extension",
+  "version": "1.1",
+  "description": "Automatically refreshes the page at set intervals with a stop condition.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

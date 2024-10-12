@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Refresh</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 10px; width: 250px; }
+    input, button { display: block; margin: 10px 0; width: 100%; padding: 8px; }
+    label { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Auto Refresh</h2>
+  <label for="interval">Refresh Interval (seconds):</label>
+  <input type="number" id="interval" min="1" value="1">
+
+  <label for="stopPrompt">Stop Prompt (optional):</label>
+  <input type="text" id="stopPrompt" placeholder="Enter stop text">
+
+  <button id="startButton">Start Auto Refresh</button>
+  <button id="stopButton">Stop Auto Refresh</button>
+
+  <div id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
