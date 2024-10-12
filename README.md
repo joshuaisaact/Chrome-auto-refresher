@@ -6,6 +6,10 @@ This Chrome extension allows you to automatically refresh a webpage every X seco
 ## Features
 - Automatically refresh a webpage at set intervals (e.g., every 30 seconds).
 - Optionally stop the auto-refresh when a specific word or phrase appears on the page.
+
+## Versions
+- 1.1 - Updated with alert, dark mode, background refresh
+- 1.0 - Refresher release
   
 ## Installation Guide
 
