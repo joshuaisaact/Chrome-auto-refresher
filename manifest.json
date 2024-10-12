@@ -5,12 +5,16 @@
   "description": "Automatically refreshes the page at set intervals with a stop condition.",
   "permissions": [
     "activeTab",
-    "scripting"
+    "scripting",
+    "notifications"
   ],
   "action": {
     "default_popup": "popup.html"
   },
   "background": {
     "service_worker": "background.js"
+  },
+  "icons": {
+    "48": "icon.png"
   }
 }
