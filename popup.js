@@ -7,6 +7,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const statusDiv = document.getElementById('status');
   const themeToggle = document.getElementById('themeToggle');
 
+  // Load the saved theme setting from chrome.storage when the popup is opened
+  chrome.storage.sync.get('theme', (data) => {
+    if (data.theme === 'light') {
+      document.body.classList.remove('dark-mode');
+      themeToggle.checked = false;
+    } else {
+      document.body.classList.add('dark-mode');
+      themeToggle.checked = true;
+    }
+  });
+
+  // Toggle theme and save the setting when the switch is clicked
+  themeToggle.addEventListener('change', () => {
+    if (themeToggle.checked) {
+      document.body.classList.add('dark-mode');
+      chrome.storage.sync.set({ theme: 'dark' });
+    } else {
+      document.body.classList.remove('dark-mode');
+      chrome.storage.sync.set({ theme: 'light' });
+    }
+  });
+
   // Update status text
   function updateStatus(isRunning) {
     statusDiv.textContent = isRunning ? 'Auto-refresh is running' : 'Auto-refresh is stopped';
@@ -37,22 +59,5 @@ document.addEventListener('DOMContentLoaded', () => {
         updateStatus(false);
       }
     });
-  });
-
-  // Handle dark mode toggle
-  const currentTheme = localStorage.getItem('theme');
-  if (currentTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-    themeToggle.checked = true;
-  }
-
-  themeToggle.addEventListener('change', () => {
-    if (themeToggle.checked) {
-      document.body.classList.add('dark-mode');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.body.classList.remove('dark-mode');
-      localStorage.setItem('theme', 'light');
-    }
   });
 });

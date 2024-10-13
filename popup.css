@@ -146,7 +146,29 @@ input:checked + .slider:before {
   transform: translateX(1.25rem);
 }
 
-/* Media Query for smaller screens */
+#tipjar {
+  text-align: right;
+  margin-top: 20px;
+  font-size: xx-small;
+}
+
+#tipjar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#emoji {
+  font-size: 2rem;
+}
+
+#buyText {
+  visibility: hidden;
+}
+
+#tipjar:hover #buyText {
+  visibility: visible;
+}
+
 @media (max-width: 400px) {
   body {
     padding: 1rem;
