@@ -1,0 +1,3 @@
+This extension does not collect, store, or transmit any personal data. All settings, such as refresh intervals, stop prompts, and theme preferences, are stored locally on your browser using Chrome’s local storage system (chrome.storage.sync). No data is sent to external servers or shared with third parties.
+
+If you have any questions regarding your privacy while using this extension, feel free to contact me.
