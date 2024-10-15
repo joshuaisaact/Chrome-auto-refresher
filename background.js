@@ -7,7 +7,7 @@ let currentTabId = null;  // Store the tabId of the current tab
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === 'start') {
     if (!isRunning) {
-      const { interval, stopPrompt: promptText, showAlert: alertEnabled } = message;
+      const { interval, stopPrompt: promptText, showAlert: alertEnabled } = message; // Changed to 'interval'
       stopPrompt = promptText;
       showAlert = alertEnabled;
 
@@ -23,7 +23,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
               func: refreshTab,
               args: [stopPrompt],
             });
-          }, interval);
+          }, interval); // Use 'interval'
 
           isRunning = true;
           sendResponse({ status: 'running' });

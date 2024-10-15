@@ -24,6 +24,14 @@
   </div>
 
   <div class="toggle-container">
+    <span>Randomize refresh interval by 10%</span>
+    <label class="switch">
+      <input type="checkbox" id="randomToggle">
+      <span class="slider round"></span>
+    </label>
+  </div>
+
+  <div class="toggle-container">
     <span>Dark Mode</span>
     <label class="switch">
       <input type="checkbox" id="themeToggle">
@@ -31,8 +39,7 @@
     </label>
   </div>
 
-  <button id="startButton">Start Auto Refresh</button>
-  <button id="stopButton">Stop Auto Refresh</button>
+  <button id="toggleButton" class="start">Start Auto Refresh</button>
 
   <div id="status"></div>
 
