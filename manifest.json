@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Auto Refresh Extension",
-  "version": "1.1",
+  "version": "1.2",
   "description": "Automatically refreshes the page at set intervals, stopping when it finds a phrase on the page.",
   "permissions": [
     "storage",
