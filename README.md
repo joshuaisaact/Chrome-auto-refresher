@@ -1,8 +1,8 @@
 
 # Auto Refresher Chrome Extension
 
-![GitHub License](https://img.shields.io/github/license/joshuaisaact/Auto-refresher)
 ![GitHub manifest version](https://img.shields.io/github/manifest-json/v/joshuaisaact/Auto-refresher)
+![GitHub License](https://img.shields.io/github/license/joshuaisaact/Auto-refresher)
 ![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/haiekoimldaeincnjchccogfbejgbmej)
 ![Chrome Web Store Rating](https://img.shields.io/chrome-web-store/rating/haiekoimldaeincnjchccogfbejgbmej)
 
