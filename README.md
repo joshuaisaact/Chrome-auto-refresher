@@ -14,6 +14,12 @@ This Chrome extension allows you to automatically refresh a webpage and stop ref
   
 ## Installation Guide
 
+Please note: this extension is now live on the Chrome web store, and can easily be installed at this link:
+
+https://chromewebstore.google.com/detail/auto-refresh-extension/haiekoimldaeincnjchccogfbejgbmej
+
+The below instructions are for if you want to install the files for testing or further development.
+
 Follow these simple steps to install the extension from GitHub onto your Chrome browser.
 
 ### Step 1: Download the Extension Files
