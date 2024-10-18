@@ -1,6 +1,8 @@
 
 # Auto Refresher Chrome Extension
 
+![Chrome Web Store Rating](https://img.shields.io/chrome-web-store/rating/:storeId)
+
 This Chrome extension allows you to automatically refresh a webpage and stop refreshing when a specific word or phrase is found on the page.
 
 ## Features
